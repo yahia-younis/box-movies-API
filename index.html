@@ -1,0 +1,114 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <title>Trending movies</title>
+  </head>
+
+  <body>
+
+      <!-- start sidbar content -->
+      <div class="sidebar position-fixed d-flex">
+        <div class="sidebar-menu d-flex justify-content-between flex-column">
+          <ul>
+            <li data-fetch="movie/now_playing" class="active movie_kind"> <i class="fa-solid fa-play"></i> now playing</li>
+            <li data-fetch="movie/popular" class="movie_kind"> <i class="fa-solid fa-arrow-up-right-dots"></i> popular</li>
+            <li data-fetch="movie/top_rated" class="movie_kind"> <i class="fa-solid fa-person-arrow-up-from-line"></i> top rated</li>
+            <li data-fetch="trending/all/week" class="movie_kind"> <i class="fa-solid fa-fire"></i> Trending </li>
+            <li data-fetch="movie/upcoming" class="movie_kind"> <i class="fa-solid fa-bolt"></i> up coming </li>
+            <li> <a href="#contact_us" class="text-decoration-none text-white"> <i class="fa-solid fa-address-card"></i> contact us </a> </li>
+          </ul>
+          <div>
+            <div class="socail-icons mb-4"> 
+              <a href="#"><i class="fa-brands fa-facebook-f me-3"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter me-3"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <p class="text-muted">Copyright Â© 2019 by <a class="text-danger text-decoration-none" href="https://github.com/yahia-younis" target="_blank">yahia-younis</a> All Rights Reserved.</p>
+          </div>  
+        </div>
+        <div class="sidebar-control h-100">
+          <img src="img/logo.png" class="w-75" alt="logo">
+          <i id="sidebar_collaps" class="fa-solid fa-bars"></i>
+          <div class="d-flex flex-column">
+            <i class="fa-solid fa-earth-africa mb-4"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+          </div>
+        </div>
+      </div>
+      <!-- end sidbar content -->
+      
+
+      <div class="container pt-5">
+
+        <!-- inputs to search and filter -->
+        <div class="filter-search d-flex ms-5 pt-5">
+          <div class="row g-4 w-100">
+            <div class="col-md-6"><input type="text" id="an_movie_se" name="an_movie_se" class="form-control custom-input me-5" placeholder="search for anthor movie"></div>
+            <div class="col-md-6"><input type="text" id="movie_se" name="movie_se" class="form-control custom-input " placeholder="filter this movies"></div>
+          </div>
+        </div>
+
+
+        <div class="my-5 ms-5">
+          <!-- spainr  hide when data show-->
+          <div class="loader"></div>
+          <!-- data show here  -->
+          <div id="movie_data" class="row py-5 g-5"></div>
+        </div>
+
+        <!-- contact us form -->
+        <div id="contact_us" class="contact-us my-5 ms-5">
+          <h3>contact-us</h3>
+          <form id="contact_us_form" action="#" class="mt-5">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" id="user_name" name="user_name" class="form-control custom-input" placeholder="enter your name">
+                <div class="alert alert-danger" id="user_name_alert" role="alert">
+                  Your Name is not valid
+                </div>
+              </div>
+              <div class="col-md-6">
+                <input type="text" id="user_email" name="user_email" class="form-control custom-input" placeholder="enter your email">
+                <div class="alert alert-danger" id="user_email_alert" role="alert">
+                  Your email is not valid
+                </div>
+              </div>
+              <div class="col-md-6">
+                <input type="text" id="user_phone" name="user_phone" class="form-control custom-input" placeholder="enter your phone">
+                <div class="alert alert-danger" id="user_phone_alert" role="alert">
+                  entre valid egyption umber
+                </div>
+              </div>
+              <div class="col-md-6">
+                <input type="text" id="user_age" name="user_age" class="form-control custom-input" placeholder="enter your age">
+                <div class="alert alert-danger" id="user_age_alert" role="alert">
+                  entre valid Age
+                </div>
+              </div>
+              <div class="col-md-6">
+                <input type="password" id="user_password" name="user_password" class="form-control custom-input" placeholder="enter your password">
+                <div class="alert alert-danger" id="user_password_alert" role="alert">
+                  entre valid password <br> - Minimum 6 characters <br> - at least one symbol <br> - one number
+                </div>
+              </div>
+              <div class="col-md-6">
+                <input type="password" id="user_re_password" name="user_re_password" class="form-control custom-input" placeholder="re_type password">
+                <div class="alert alert-danger" id="user_re_password_alert" role="alert">
+                  your passwords not match
+                </div>
+              </div>
+            </div>
+            <button id="btn_submit" class="btn btn-outline-danger mt-5" type="submit">sumbit</button>
+          </form>
+        </div>
+      </div>
+      
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
