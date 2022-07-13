@@ -8,5 +8,5 @@
   - Up Coming movies
   
  <h1>
- <a href="box-movies-api.epizy.com	" target="_blank" >live-weather Demo</a>
+ <a href="http://box-movies-api.epizy.com/" target="_blank" >box-movies-API Demo</a>
  </h1>
